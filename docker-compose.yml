@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  notifier:
+    build: .
+    environment:
+      API_BASE_URL: ${API_BASE_URL}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      HEARTBEAT_MINS: ${HEARTBEAT_MINS}
+    command: python app/app_v2.py

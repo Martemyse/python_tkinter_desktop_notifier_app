@@ -1,0 +1,6 @@
+pika
+requests
+python-dotenv
+Pillow
+pywin32; sys_platform == "win32"
+
